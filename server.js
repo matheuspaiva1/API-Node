@@ -12,12 +12,20 @@ import {fastify} from 'fastify'
 
 const server = fastify()
 
-server.get('/', () => {
+server.post('/videos', () => {
   return 'Hello World'
 })
 
-server.get('/users', () => {
+server.get('/videos', () => {
   return 'Hello users'
+})
+
+server.put('/videos/:id', () => {
+  return 'Hello World'
+})
+
+server.delete('/videos/:id', () => {
+  return 'Hello World'
 })
 
 server.listen({
